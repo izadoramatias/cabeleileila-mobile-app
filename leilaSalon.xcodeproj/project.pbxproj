@@ -6,7 +6,21 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		CC4F91E72FE4DA7300C358AE /* WidgetKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4F91E62FE4DA7300C358AE /* WidgetKit.framework */; };
+		CC4F91E92FE4DA7300C358AE /* SwiftUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC4F91E82FE4DA7300C358AE /* SwiftUI.framework */; };
+		CC4F91FF2FE4E12300C358AE /* leilaSalonWidgetExtensionExtension.appex in Copy Files (1 item) */ = {isa = PBXBuildFile; fileRef = CC4F91E42FE4DA7300C358AE /* leilaSalonWidgetExtensionExtension.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		CCE937982FE19A5600538A2C /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = CCE937972FE19A5600538A2C /* Supabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
+		CC4F91FC2FE4E07A00C358AE /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = CC9057EA2FE18546007D0F64 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = CC4F91E32FE4DA7300C358AE;
+			remoteInfo = leilaSalonWidgetExtensionExtension;
+		};
 		CC9058022FE18548007D0F64 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = CC9057EA2FE18546007D0F64 /* Project object */;
@@ -23,15 +37,61 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		CC4F91FE2FE4E0B800C358AE /* Copy Files (1 item) */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				CC4F91FF2FE4E12300C358AE /* leilaSalonWidgetExtensionExtension.appex in Copy Files (1 item) */,
+			);
+			name = "Copy Files (1 item)";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		CC4F91E42FE4DA7300C358AE /* leilaSalonWidgetExtensionExtension.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = leilaSalonWidgetExtensionExtension.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		CC4F91E62FE4DA7300C358AE /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		CC4F91E82FE4DA7300C358AE /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
 		CC9057F22FE18546007D0F64 /* leilaSalon.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = leilaSalon.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC9058012FE18548007D0F64 /* leilaSalonTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = leilaSalonTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC90580B2FE18548007D0F64 /* leilaSalonUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = leilaSalonUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		CC4F91F22FE4DA7500C358AE /* Exceptions for "leilaSalonWidgetExtension" folder in "leilaSalonWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Info.plist,
+			);
+			target = CC4F91E32FE4DA7300C358AE /* leilaSalonWidgetExtensionExtension */;
+		};
+		CC4F91F92FE4DB1C00C358AE /* Exceptions for "leilaSalon" folder in "leilaSalonWidgetExtensionExtension" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Src/Modules/Schedule/Domain/Appointment.swift,
+				Src/Modules/Schedule/Domain/SalonService.swift,
+			);
+			target = CC4F91E32FE4DA7300C358AE /* leilaSalonWidgetExtensionExtension */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		CC4F91EA2FE4DA7300C358AE /* leilaSalonWidgetExtension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CC4F91F22FE4DA7500C358AE /* Exceptions for "leilaSalonWidgetExtension" folder in "leilaSalonWidgetExtensionExtension" target */,
+			);
+			path = leilaSalonWidgetExtension;
+			sourceTree = "<group>";
+		};
 		CC9057F42FE18546007D0F64 /* leilaSalon */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				CC4F91F92FE4DB1C00C358AE /* Exceptions for "leilaSalon" folder in "leilaSalonWidgetExtensionExtension" target */,
+			);
 			path = leilaSalon;
 			sourceTree = "<group>";
 		};
@@ -48,10 +108,20 @@
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		CC4F91E12FE4DA7300C358AE /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC4F91E92FE4DA7300C358AE /* SwiftUI.framework in Frameworks */,
+				CC4F91E72FE4DA7300C358AE /* WidgetKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC9057EF2FE18546007D0F64 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE937982FE19A5600538A2C /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -72,12 +142,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CC4F91E52FE4DA7300C358AE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CC4F91E62FE4DA7300C358AE /* WidgetKit.framework */,
+				CC4F91E82FE4DA7300C358AE /* SwiftUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CC9057E92FE18546007D0F64 = {
 			isa = PBXGroup;
 			children = (
 				CC9057F42FE18546007D0F64 /* leilaSalon */,
 				CC9058042FE18548007D0F64 /* leilaSalonTests */,
 				CC90580E2FE18548007D0F64 /* leilaSalonUITests */,
+				CC4F91EA2FE4DA7300C358AE /* leilaSalonWidgetExtension */,
+				CC4F91E52FE4DA7300C358AE /* Frameworks */,
 				CC9057F32FE18546007D0F64 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -88,6 +169,7 @@
 				CC9057F22FE18546007D0F64 /* leilaSalon.app */,
 				CC9058012FE18548007D0F64 /* leilaSalonTests.xctest */,
 				CC90580B2FE18548007D0F64 /* leilaSalonUITests.xctest */,
+				CC4F91E42FE4DA7300C358AE /* leilaSalonWidgetExtensionExtension.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -95,6 +177,28 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		CC4F91E32FE4DA7300C358AE /* leilaSalonWidgetExtensionExtension */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = CC4F91F32FE4DA7500C358AE /* Build configuration list for PBXNativeTarget "leilaSalonWidgetExtensionExtension" */;
+			buildPhases = (
+				CC4F91E02FE4DA7300C358AE /* Sources */,
+				CC4F91E12FE4DA7300C358AE /* Frameworks */,
+				CC4F91E22FE4DA7300C358AE /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				CC4F91EA2FE4DA7300C358AE /* leilaSalonWidgetExtension */,
+			);
+			name = leilaSalonWidgetExtensionExtension;
+			packageProductDependencies = (
+			);
+			productName = leilaSalonWidgetExtensionExtension;
+			productReference = CC4F91E42FE4DA7300C358AE /* leilaSalonWidgetExtensionExtension.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
 		CC9057F12FE18546007D0F64 /* leilaSalon */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = CC9058152FE18548007D0F64 /* Build configuration list for PBXNativeTarget "leilaSalon" */;
@@ -102,16 +206,19 @@
 				CC9057EE2FE18546007D0F64 /* Sources */,
 				CC9057EF2FE18546007D0F64 /* Frameworks */,
 				CC9057F02FE18546007D0F64 /* Resources */,
+				CC4F91FE2FE4E0B800C358AE /* Copy Files (1 item) */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				CC4F91FD2FE4E07A00C358AE /* PBXTargetDependency */,
 			);
 			fileSystemSynchronizedGroups = (
 				CC9057F42FE18546007D0F64 /* leilaSalon */,
 			);
 			name = leilaSalon;
 			packageProductDependencies = (
+				CCE937972FE19A5600538A2C /* Supabase */,
 			);
 			productName = leilaSalon;
 			productReference = CC9057F22FE18546007D0F64 /* leilaSalon.app */;
@@ -173,6 +280,9 @@
 				LastSwiftUpdateCheck = 2600;
 				LastUpgradeCheck = 2600;
 				TargetAttributes = {
+					CC4F91E32FE4DA7300C358AE = {
+						CreatedOnToolsVersion = 26.0;
+					};
 					CC9057F12FE18546007D0F64 = {
 						CreatedOnToolsVersion = 26.0;
 					};
@@ -195,6 +305,9 @@
 			);
 			mainGroup = CC9057E92FE18546007D0F64;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				CCE937962FE19A5600538A2C /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = CC9057F32FE18546007D0F64 /* Products */;
 			projectDirPath = "";
@@ -203,11 +316,19 @@
 				CC9057F12FE18546007D0F64 /* leilaSalon */,
 				CC9058002FE18548007D0F64 /* leilaSalonTests */,
 				CC90580A2FE18548007D0F64 /* leilaSalonUITests */,
+				CC4F91E32FE4DA7300C358AE /* leilaSalonWidgetExtensionExtension */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		CC4F91E22FE4DA7300C358AE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC9057F02FE18546007D0F64 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -232,6 +353,13 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		CC4F91E02FE4DA7300C358AE /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		CC9057EE2FE18546007D0F64 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -256,6 +384,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		CC4F91FD2FE4E07A00C358AE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = CC4F91E32FE4DA7300C358AE /* leilaSalonWidgetExtensionExtension */;
+			targetProxy = CC4F91FC2FE4E07A00C358AE /* PBXContainerItemProxy */;
+		};
 		CC9058032FE18548007D0F64 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = CC9057F12FE18546007D0F64 /* leilaSalon */;
@@ -269,6 +402,80 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
+		CC4F91F42FE4DA7500C358AE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = leilaSalonWidgetExtension/leilaSalonWidgetExtensionExtension.entitlements;
+				CODE_SIGN_IDENTITY = None;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = leilaSalonWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = leilaSalonWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.leilaSalon.leilaSalonWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Debug;
+		};
+		CC4F91F52FE4DA7500C358AE /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_WIDGET_BACKGROUND_COLOR_NAME = WidgetBackground;
+				CODE_SIGN_ENTITLEMENTS = leilaSalonWidgetExtension/leilaSalonWidgetExtensionExtension.entitlements;
+				CODE_SIGN_IDENTITY = None;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = leilaSalonWidgetExtension/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = leilaSalonWidgetExtension;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+					"@executable_path/../../../../Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = app.leilaSalon.leilaSalonWidgetExtension;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = watchos;
+				SKIP_INSTALL = YES;
+				STRING_CATALOG_GENERATE_SYMBOLS = YES;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_APPROACHABLE_CONCURRENCY = YES;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_UPCOMING_FEATURE_MEMBER_IMPORT_VISIBILITY = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				WATCHOS_DEPLOYMENT_TARGET = 26.0;
+			};
+			name = Release;
+		};
 		CC9058132FE18548007D0F64 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -393,8 +600,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = leilaSalon/leilaSalon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -424,8 +633,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = leilaSalon/leilaSalon.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -533,6 +744,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		CC4F91F32FE4DA7500C358AE /* Build configuration list for PBXNativeTarget "leilaSalonWidgetExtensionExtension" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				CC4F91F42FE4DA7500C358AE /* Debug */,
+				CC4F91F52FE4DA7500C358AE /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		CC9057ED2FE18546007D0F64 /* Build configuration list for PBXProject "leilaSalon" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
@@ -570,6 +790,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CCE937962FE19A5600538A2C /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CCE937972FE19A5600538A2C /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CCE937962FE19A5600538A2C /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = CC9057EA2FE18546007D0F64 /* Project object */;
 }

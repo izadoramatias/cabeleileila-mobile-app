@@ -7,14 +7,28 @@
 
 import SwiftUI
 import SwiftData
+import Supabase
+import WidgetKit
 
 @main
 struct leilaSalonApp: App {
+    @Environment(\.scenePhase) private var scenePhase
+    
+    init() {
+        clearKeychainIfFirstLaunch()
+        _ = NotificationManager.shared
+    }
+    
     var sharedModelContainer: ModelContainer = {
         let schema = Schema([
-            Item.self,
+            Appointment.self,
+            SalonService.self,
         ])
-        let modelConfiguration = ModelConfiguration(schema: schema, isStoredInMemoryOnly: false)
+        let modelConfiguration = ModelConfiguration(
+            schema: schema,
+            isStoredInMemoryOnly: false,
+            groupContainer: .identifier(Constants.App.appGroupId)
+        )
 
         do {
             return try ModelContainer(for: schema, configurations: [modelConfiguration])
@@ -25,8 +39,23 @@ struct leilaSalonApp: App {
 
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            AppCoordinator()
         }
         .modelContainer(sharedModelContainer)
+        .onChange(of: scenePhase) { _, newPhase in
+            if newPhase == .background {
+                WidgetCenter.shared.reloadAllTimelines()
+            }
+        }
+    }
+    
+    private func clearKeychainIfFirstLaunch() {
+        let key = "hasLaunchedBefore"
+        
+        guard UserDefaults.standard.bool(forKey: key) == false else { return }
+        
+        Task { try? await SupabaseManager.shared.client.auth.signOut(scope: .local) }
+        
+        UserDefaults.standard.set(true, forKey: key)
     }
 }
