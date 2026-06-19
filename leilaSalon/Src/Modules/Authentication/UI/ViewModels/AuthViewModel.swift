@@ -8,6 +8,7 @@
 import Foundation
 import Combine
 import SwiftUI
+import WidgetKit
 
 @MainActor
 class AuthViewModel: ObservableObject {
@@ -75,6 +76,11 @@ class AuthViewModel: ObservableObject {
         case .success:
             authState = .unauthenticated
             clearFields()
+            
+            let defaults = UserDefaults(suiteName: Constants.App.appGroupId)
+            defaults?.removeObject(forKey: "userId")
+            defaults?.removeObject(forKey: "userRole")
+            WidgetCenter.shared.reloadAllTimelines()
         case .failure(let error):
             authState = .error(error.localizedDescription)
         }
@@ -100,6 +106,9 @@ class AuthViewModel: ObservableObject {
         
         let defaults = UserDefaults(suiteName: Constants.App.appGroupId)
         defaults?.set(userRole.rawValue, forKey: "userRole")
+        defaults?.set(userId, forKey: "userId")
+        
+        WidgetCenter.shared.reloadAllTimelines()
     }
     
     private func execute(_ action: @escaping () async throws -> Any?) async {

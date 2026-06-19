@@ -42,9 +42,24 @@ private struct ClientProvider: TimelineProvider {
     private func nextAppointment() -> AppointmentSnapshot? {
         guard let container = sharedContainer() else { return nil }
         
+        let defaults = UserDefaults(suiteName: Config.appGroup)
+        let currentUserId = defaults?.string(forKey: "userId") ?? ""
+        let isAdmin = defaults?.string(forKey: "userRole") == "admin"
+        
+        guard !currentUserId.isEmpty else { return nil }
+        
         let context = ModelContext(container)
         let now = Date()
-        let predicate = #Predicate<Appointment> { $0.scheduledDate > now }
+        
+        let predicate: Predicate<Appointment>
+        if isAdmin {
+            predicate = #Predicate<Appointment> { $0.scheduledDate > now }
+        } else {
+            predicate = #Predicate<Appointment> {
+                $0.scheduledDate > now && $0.userId == currentUserId
+            }
+        }
+        
         var descriptor = FetchDescriptor(predicate: predicate, sortBy: [SortDescriptor(\.scheduledDate)])
         descriptor.fetchLimit = 1
         
