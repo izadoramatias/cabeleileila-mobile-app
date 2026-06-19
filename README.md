@@ -89,3 +89,16 @@ O projeto inclui testes unitários. Para executá-los:
 
 1. Pressione `Cmd+U`.
 
+---
+
+## 📌 Observações
+
+1. Login admin
+   - email: leila@salon.com
+   - senha: leilaAdm@26
+2. Para acessar como cliente cabeleileilo, crie seu proprio login clicando em `Cadastrar-se` na tela de login do app.
+
+
+<img width="300" alt="Simulator Screenshot - Clone 3 of iPhone 17 Pro Max - 2026-06-19 at 00 55 39" src="https://github.com/user-attachments/assets/836c19c0-e17e-441e-8d51-835d02f231ba" />
+<img width="300" alt="Simulator Screenshot - Clone 3 of iPhone 17 Pro Max - 2026-06-19 at 00 54 59" src="https://github.com/user-attachments/assets/4cfd4151-bcd5-49af-8dea-5ce37c0b50f7" />
+
